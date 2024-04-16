@@ -4,27 +4,28 @@ import jakarta.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "chairs")
+@Table(name = "chair")
 public class Chair {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private Integer id;
 
-    @Column(name = "id_flight")
-    private int idFlight;
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "first_class")
+    private Boolean firstClass;
 
     @Column(name = "available")
-    private boolean available;
-
-    @Column(name = "type")
-    private String type;
+    private Boolean available;
 
     @Column(name = "price")
-    private double price;
-
-    @Column(name = "number")
-    private int number;
+    private Double price;
+    
+    @Column(name = "id_plane")
+    private Integer idPlane;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_at", nullable = false, updatable = false)
@@ -34,36 +35,36 @@ public class Chair {
     @Column(name = "updated_at", nullable = false)
     private Date updatedAt;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public int getIdFlight() {
-        return idFlight;
+    public String getName() {
+        return name;
     }
 
-    public void setIdFlight(int idFlight) {
-        this.idFlight = idFlight;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public boolean isAvailable() {
+    public boolean getFirstClass() {
+        return firstClass;
+    }
+
+    public void setFirstClass(boolean firstClass) {
+        this.firstClass = firstClass;
+    }
+
+    public boolean getAvailable() {
         return available;
     }
 
     public void setAvailable(boolean available) {
         this.available = available;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public double getPrice() {
@@ -74,12 +75,12 @@ public class Chair {
         this.price = price;
     }
 
-    public int getNumber() {
-        return number;
+    public int getIdPlane() {
+        return idPlane;
     }
 
-    public void setNumber(int number) {
-        this.number = number;
+    public void setIdPlane(int idPlane) {
+        this.idPlane = idPlane;
     }
 
     public Date getCreatedAt() {
@@ -97,4 +98,5 @@ public class Chair {
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
+
 }

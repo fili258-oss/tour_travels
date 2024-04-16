@@ -14,14 +14,12 @@ import java.util.Optional;
 @Mapper(componentModel = "spring")
 public interface ChairMapper {
     @Mappings({
-            @Mapping(source = "id", target ="chairID"),
-            @Mapping(source = "id_flight", target ="flightID"),
-            @Mapping(source = "available", target ="isAvailable"),
-            @Mapping(source = "type", target ="chairType"),
-            @Mapping(source = "price", target ="chairPrice"),
-            @Mapping(source = "number", target ="chairNumber"),
-            @Mapping(source = "created_at", target ="createdAt"),
-            @Mapping(source = "updated_at", target ="updatedAt")
+            @Mapping(source = "id", target ="id"),
+            @Mapping(source = "name", target ="name"),
+            @Mapping(source = "firstClass", target ="firstClass"),
+            @Mapping(source = "available", target ="available"),
+            @Mapping(source = "price", target ="price"),
+            @Mapping(source = "idPlane", target ="idPlane"),
     })
     ChairDTO toChairDTO(Chair chair);
 

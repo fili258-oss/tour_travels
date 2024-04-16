@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface ChairCrudRepository extends CrudRepository<Chair, Integer> {
-    List<Chair> findByIdFlight(Integer idFlight);
+    List<Chair> findByIdPlane(Integer idPlane);
 }

@@ -1,14 +1,13 @@
 package com.tour.travels.domain.dto;
 
 public class ChairDTO {
+
     private Integer id;
-    private Integer idFlight;
+    private String name;
+    private Boolean firstClass;
     private Boolean available;
-    private String type;
     private Double price;
-    private Integer number;
-    private String createdAt;
-    private String updatedAt;
+    private Integer idPlane;
 
     public Integer getId() {
         return id;
@@ -18,12 +17,20 @@ public class ChairDTO {
         this.id = id;
     }
 
-    public Integer getIdFlight() {
-        return idFlight;
+    public String getName() {
+        return name;
     }
 
-    public void setIdFlight(Integer idFlight) {
-        this.idFlight = idFlight;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Boolean getFirstClass() {
+        return firstClass;
+    }
+
+    public void setFirstClass(Boolean firstClass) {
+        this.firstClass = firstClass;
     }
 
     public Boolean getAvailable() {
@@ -34,14 +41,6 @@ public class ChairDTO {
         this.available = available;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
     public Double getPrice() {
         return price;
     }
@@ -50,27 +49,12 @@ public class ChairDTO {
         this.price = price;
     }
 
-    public Integer getNumber() {
-        return number;
+    public Integer getIdPlane() {
+        return idPlane;
     }
 
-    public void setNumber(Integer number) {
-        this.number = number;
+    public void setIdPlane(Integer idPlane) {
+        this.idPlane = idPlane;
     }
 
-    public String getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public String getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(String updatedAt) {
-        this.updatedAt = updatedAt;
-    }
 }

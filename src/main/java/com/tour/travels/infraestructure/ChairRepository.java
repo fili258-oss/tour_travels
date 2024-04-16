@@ -26,8 +26,8 @@ public class ChairRepository implements ChairRepositoryDomain {
     }
 
     @Override
-    public List<ChairDTO> getByIdFlight(Integer idFlight) {
-        List<Chair> chairs = chairRepo.findByIdFlight(idFlight);
+    public List<ChairDTO> getByIdPlane(Integer idPlane) {
+        List<Chair> chairs = chairRepo.findByIdPlane(idPlane);
         return mapper.toChairsDTO(chairs);
     }
 

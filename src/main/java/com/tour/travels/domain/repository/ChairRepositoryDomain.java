@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface ChairRepositoryDomain {
 
     List<ChairDTO> getAll();
-    List<ChairDTO> getByIdFlight(Integer idFlight);
+    List<ChairDTO> getByIdPlane(Integer idPlane);
     Optional<ChairDTO> getById(Integer idChairDTO);
     ChairDTO save(ChairDTO ChairDTO);
     void delete(Integer idChairDTO);
