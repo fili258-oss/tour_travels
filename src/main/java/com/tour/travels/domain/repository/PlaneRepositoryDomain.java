@@ -11,6 +11,5 @@ public interface PlaneRepositoryDomain {
     List<PlaneDTO> getByIdReservation(Integer idReservation);
     Optional<PlaneDTO> getById(Integer idPlaneDTO);
     PlaneDTO save(PlaneDTO planeDTO);
-    void delete(Integer idPlaneDTO);
 
 }

@@ -44,9 +44,4 @@ public class PlaneRepository implements PlaneRepositoryDomain{
         return mapper.toPlaneDTO(planeRepo.save(plane));
     }
 
-    @Override
-    public void delete(Integer idPlaneDTO) {
-        planeRepo.deleteById(idPlaneDTO);
-    }
-
 }
