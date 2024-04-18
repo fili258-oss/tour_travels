@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface PlaneRepositoryDomain {
 
     List<PlaneDTO> getAll();
-    List<PlaneDTO> getByIdReservation(Integer idReservation);
+
     Optional<PlaneDTO> getById(Integer idPlaneDTO);
     PlaneDTO save(PlaneDTO planeDTO);
 
