@@ -4,6 +4,7 @@ import com.tour.travels.domain.dto.ReservationDTO;
 import com.tour.travels.domain.repository.ReservationRepositoryDomain;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 import java.util.Optional;
@@ -26,8 +27,6 @@ public class ReservationService {
         return reservationRepositoryDomain.getById(idReservationDTO);
     }
 
-    public ReservationDTO save(ReservationDTO reservationDTO){
-        return reservationRepositoryDomain.save(reservationDTO);
-    }
+    public ReservationDTO save (@RequestBody ReservationDTO reservationDTO){return reservationRepositoryDomain.save(reservationDTO);}
 
 }

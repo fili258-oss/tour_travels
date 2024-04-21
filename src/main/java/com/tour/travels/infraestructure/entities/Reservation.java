@@ -24,13 +24,7 @@ public class Reservation {
     @Column(name = "id_flight")
     private Integer idFlight;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "created_at", nullable = false, updatable = false)
-    private Date createdAt;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "updated_at", nullable = false)
-    private Date updatedAt;
 
     public Integer getId() {
         return id;
@@ -72,20 +66,5 @@ public class Reservation {
         this.idFlight = idFlight;
     }
 
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
-    }
 
 }
