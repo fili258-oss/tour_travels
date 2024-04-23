@@ -10,17 +10,20 @@ import org.mapstruct.Mappings;
 import java.util.List;
 import java.util.Optional;
 
-
 @Mapper(componentModel = "spring")
 public interface ChairMapper {
+
     @Mappings({
-            @Mapping(source = "id", target ="id"),
-            @Mapping(source = "name", target ="name"),
-            @Mapping(source = "firstClass", target ="firstClass"),
-            @Mapping(source = "available", target ="available"),
-            @Mapping(source = "price", target ="price"),
-            @Mapping(source = "idPlane", target ="idPlane"),
+
+        @Mapping(source = "id", target ="id"),
+        @Mapping(source = "name", target ="name"),
+        @Mapping(source = "firstClass", target ="firstClass"),
+        @Mapping(source = "available", target ="available"),
+        @Mapping(source = "price", target ="price"),
+        @Mapping(source = "idPlane", target ="idPlane")
+
     })
+
     ChairDTO toChairDTO(Chair chair);
 
     List<ChairDTO> toChairsDTO(List<Chair> chair);
@@ -31,4 +34,5 @@ public interface ChairMapper {
 
     @InheritInverseConfiguration
     Chair toChair(ChairDTO chairDTO);
+
 }

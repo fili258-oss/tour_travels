@@ -13,9 +13,10 @@ import java.util.Optional;
 
 @Repository
 public class ChairRepository implements ChairRepositoryDomain {
+
     @Autowired
     private ChairCrudRepository chairRepo;
-    
+
     @Autowired
     private ChairMapper mapper;
 
@@ -47,4 +48,5 @@ public class ChairRepository implements ChairRepositoryDomain {
     public void delete(Integer idChairDTO) {
         chairRepo.deleteById(idChairDTO);
     }
+
 }

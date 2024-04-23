@@ -18,20 +18,20 @@ public class ChairService {
         return chairRepo.getAll();
     }
 
-    public Optional<ChairDTO> getByID(Integer chairDTOID){
-        return chairRepo.getById(chairDTOID);
+    public Optional<ChairDTO> getByID(Integer idChairDTO){
+        return chairRepo.getById(idChairDTO);
     }
 
     public ChairDTO save(ChairDTO chairDTO){
         return chairRepo.save(chairDTO);
     }
 
-    public boolean delete(Integer chairDTOID){
-        if(getByID(chairDTOID).isPresent()){
-            chairRepo.delete(chairDTOID);
+    public boolean delete(Integer idChairDTO){
+        if(getByID(idChairDTO).isPresent()){
+            chairRepo.delete(idChairDTO);
             return true;
         }
         return false;
     }
-    
+
 }
