@@ -1,30 +1,12 @@
-package com.tour.travels.infraestructure.entities;
+package com.tour.travels.domain.dto;
 
-import jakarta.persistence.*;
-import java.util.Date;
-
-@Entity
-@Table(name = "reservation")
-public class Reservation {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+public class ReservationDTO {
+    
     private Integer id;
-
-    @Column(name = "active")
     private Boolean active;
-
-    @Column(name = "paid")
     private Boolean paid;
-
-    @Column(name = "id_user")
     private Integer idUser;
-
-    @Column(name = "id_flight")
     private Integer idFlight;
-
-
 
     public Integer getId() {
         return id;
@@ -65,6 +47,5 @@ public class Reservation {
     public void setIdFlight(Integer idFlight) {
         this.idFlight = idFlight;
     }
-
 
 }

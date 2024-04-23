@@ -26,11 +26,6 @@ public class PlaneRepository implements PlaneRepositoryDomain{
         return mapper.toPlanesDTO(planes);
     }
 
-    @Override
-    public List<PlaneDTO> getByIdReservation(Integer idReservation) {
-        List<Plane> planes = planeRepo.findByIdReservation(idReservation);
-        return mapper.toPlanesDTO(planes);
-    }
 
     @Override
     public Optional<PlaneDTO> getById(Integer idPlaneDTO) {

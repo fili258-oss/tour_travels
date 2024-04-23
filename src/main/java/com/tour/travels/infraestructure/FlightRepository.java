@@ -43,5 +43,5 @@ public class FlightRepository implements FlightRepositoryDomain{
         Flight flight = flightMapper.toFlight(flightDTO);
         return flightMapper.toFlightDTO(flightCrudRepository.save(flight));
     }
-    
+
 }
