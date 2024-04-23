@@ -11,6 +11,5 @@ public interface ChairRepositoryDomain {
     List<ChairDTO> getByIdPlane(Integer idPlane);
     Optional<ChairDTO> getById(Integer idChairDTO);
     ChairDTO save(ChairDTO chairDTO);
-    void delete(Integer idChairDTO);
 
 }

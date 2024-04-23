@@ -44,9 +44,4 @@ public class ChairRepository implements ChairRepositoryDomain {
         return mapper.toChairDTO(chairRepo.save(chair));
     }
 
-    @Override
-    public void delete(Integer idChairDTO) {
-        chairRepo.deleteById(idChairDTO);
-    }
-
 }

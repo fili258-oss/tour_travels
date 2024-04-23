@@ -18,20 +18,12 @@ public class PlaneService {
         return planeRepo.getAll();
     }
 
-    public Optional<PlaneDTO> getByID(Integer idPlaneDTO){
+    public Optional<PlaneDTO> getById(Integer idPlaneDTO){
         return planeRepo.getById(idPlaneDTO);
     }
 
     public PlaneDTO save(PlaneDTO planeDTO){
         return planeRepo.save(planeDTO);
-    }
-
-    public boolean delete(Integer idPlaneDTO){
-        if(getByID(idPlaneDTO).isPresent()){
-            planeRepo.delete(idPlaneDTO);
-            return true;
-        }
-        return false;
     }
 
 }
