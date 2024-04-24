@@ -12,18 +12,18 @@ import java.util.Optional;
 public class PlaneService {
 
     @Autowired
-    private PlaneRepositoryDomain planeRepo;
+    private PlaneRepositoryDomain planeRepositoryDomain;
 
     public List<PlaneDTO> getAll(){
-        return planeRepo.getAll();
+        return planeRepositoryDomain.getAll();
     }
 
     public Optional<PlaneDTO> getById(Integer idPlaneDTO){
-        return planeRepo.getById(idPlaneDTO);
+        return planeRepositoryDomain.getById(idPlaneDTO);
     }
 
     public PlaneDTO save(PlaneDTO planeDTO){
-        return planeRepo.save(planeDTO);
+        return planeRepositoryDomain.save(planeDTO);
     }
 
 }
