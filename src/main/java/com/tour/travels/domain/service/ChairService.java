@@ -12,18 +12,18 @@ import java.util.Optional;
 public class ChairService {
 
     @Autowired
-    private ChairRepositoryDomain chairRepo;
+    private ChairRepositoryDomain chairRepositoryDomain;
 
     public List<ChairDTO> getAll(){
-        return chairRepo.getAll();
+        return chairRepositoryDomain.getAll();
     }
 
     public Optional<ChairDTO> getById(Integer idChairDTO){
-        return chairRepo.getById(idChairDTO);
+        return chairRepositoryDomain.getById(idChairDTO);
     }
 
     public ChairDTO save(ChairDTO chairDTO){
-        return chairRepo.save(chairDTO);
+        return chairRepositoryDomain.save(chairDTO);
     }
 
 }
