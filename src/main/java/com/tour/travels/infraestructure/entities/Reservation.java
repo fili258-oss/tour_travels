@@ -24,7 +24,13 @@ public class Reservation {
     @Column(name = "id_flight")
     private Integer idFlight;
 
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "created_at", nullable = false, updatable = false)
+    private Date createdAt;
 
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "updated_at", nullable = false)
+    private Date updatedAt;
 
     public Integer getId() {
         return id;
